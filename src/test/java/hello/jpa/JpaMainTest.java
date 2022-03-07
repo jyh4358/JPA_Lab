@@ -72,6 +72,8 @@ public class JpaMainTest {
         member.setName("changeName");
         member.setName("changeName2");
 
+        Assertions.assertThat(em.find(Member.class, 1L).getName())
+                .isEqualTo(member.getName());
     }
 
     @Test
@@ -88,6 +90,8 @@ public class JpaMainTest {
         System.out.println("==== flush before ====");
         em.flush();
         System.out.println("==== flush after ====");
+        Assertions.assertThat(em.find(Member.class, 1L))
+                .isEqualTo(member);
 
     }
 
@@ -101,9 +105,10 @@ public class JpaMainTest {
         member.setName("member1");
 
         em.persist(member);
-
         // 준영속 상태로 전환
         em.detach(member);
 
+        Assertions.assertThat(em.find(Member.class, 1L))
+                .isNotEqualTo(member);
     }
 }
