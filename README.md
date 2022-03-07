@@ -32,24 +32,24 @@
 - 동일성(identity) test
 
 
-![title](https://user-images.githubusercontent.com/97331219/156993397-a1b91c47-4b38-4120-a4a7-f7e8de4c6097.png)
+<img src="https://user-images.githubusercontent.com/97331219/156993397-a1b91c47-4b38-4120-a4a7-f7e8de4c6097.png" width="400" height="300">
 
 
 - 쓰기지연 test
 
-![image](https://user-images.githubusercontent.com/97331219/156993981-0a72aa59-f688-4071-86f3-74ad3adfe882.png)
+<img src="https://user-images.githubusercontent.com/97331219/156993981-0a72aa59-f688-4071-86f3-74ad3adfe882.png" width="400" height="300">
 
 
 - 변경감지 test
 
-![image](https://user-images.githubusercontent.com/97331219/156994707-286f6ce2-c47f-472f-8c44-484e91e3fed9.png)
+<img src="https://user-images.githubusercontent.com/97331219/156994707-286f6ce2-c47f-472f-8c44-484e91e3fed9.png" width="400" height="300">
 
 - 플러시 test
 
-![image](https://user-images.githubusercontent.com/97331219/156995179-bc1a39ca-01a6-4b9e-8e55-509d2106f9bc.png)
+<img src="https://user-images.githubusercontent.com/97331219/156995179-bc1a39ca-01a6-4b9e-8e55-509d2106f9bc.png" width="400" height="300">
 
 - 준영속 test
 
-![image](https://user-images.githubusercontent.com/97331219/156995373-8b13f631-e70e-4d65-b806-9963a98b60e9.png)
+<img src="https://user-images.githubusercontent.com/97331219/156995373-8b13f631-e70e-4d65-b806-9963a98b60e9.png" width="400" height="300">
 
 
