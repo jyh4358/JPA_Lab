@@ -22,4 +22,9 @@
 
 22.03.07
 - 동일성(identity) 확인
-<img src="https://user-images.githubusercontent.com/97331219/156992665-e115216d-68e6-42aa-8ea8-20e9ed5708d8.png" width="200" height=300">
+- 
+
+  ![title](https://user-images.githubusercontent.com/97331219/156993397-a1b91c47-4b38-4120-a4a7-f7e8de4c6097.png){: width="100" height="100"}
+
+
+![image](https://user-images.githubusercontent.com/97331219/156993397-a1b91c47-4b38-4120-a4a7-f7e8de4c6097.png){: width="100" height="100"}
