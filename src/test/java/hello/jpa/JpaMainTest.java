@@ -3,11 +3,9 @@ package hello.jpa;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -23,7 +21,7 @@ public class JpaMainTest {
     @Rollback(false)
     void 동일성(){
 
-        Member member = new Member();
+        MemberTest member = new MemberTest();
         member.setId(1L);
         member.setName("member1");
 
@@ -31,8 +29,8 @@ public class JpaMainTest {
         em.persist(member);
         System.out.println("==== persist after ====");
 
-        Member findMember1 = em.find(Member.class,1L);
-        Member findMember2 = em.find(Member.class, 1L);
+        MemberTest findMember1 = em.find(MemberTest.class,1L);
+        MemberTest findMember2 = em.find(MemberTest.class, 1L);
 
         Assertions.assertThat(findMember1).isEqualTo(findMember2);
     }
@@ -42,10 +40,10 @@ public class JpaMainTest {
     @Rollback(false)
     void 쓰기지연(){
 
-        Member member1 = new Member();
+        MemberTest member1 = new MemberTest();
         member1.setId(1L);
         member1.setName("member1");
-        Member member2 = new Member();
+        MemberTest member2 = new MemberTest();
         member2.setId(2L);
         member2.setName("member2");
 
@@ -61,7 +59,7 @@ public class JpaMainTest {
     @Rollback(false)
     void 변경감지(){
 
-        Member member = new Member();
+        MemberTest member = new MemberTest();
         member.setId(1L);
         member.setName("member1");
 
@@ -72,7 +70,7 @@ public class JpaMainTest {
         member.setName("changeName");
         member.setName("changeName2");
 
-        Assertions.assertThat(em.find(Member.class, 1L).getName())
+        Assertions.assertThat(em.find(MemberTest.class, 1L).getName())
                 .isEqualTo(member.getName());
     }
 
@@ -81,7 +79,7 @@ public class JpaMainTest {
     @Rollback(false)
     void 플러시(){
 
-        Member member = new Member();
+        MemberTest member = new MemberTest();
         member.setId(1L);
         member.setName("member1");
 
@@ -90,7 +88,7 @@ public class JpaMainTest {
         System.out.println("==== flush before ====");
         em.flush();
         System.out.println("==== flush after ====");
-        Assertions.assertThat(em.find(Member.class, 1L))
+        Assertions.assertThat(em.find(MemberTest.class, 1L))
                 .isEqualTo(member);
 
     }
@@ -100,7 +98,7 @@ public class JpaMainTest {
     @Rollback(false)
     void 준영속(){
 
-        Member member = new Member();
+        MemberTest member = new MemberTest();
         member.setId(1L);
         member.setName("member1");
 
@@ -108,7 +106,7 @@ public class JpaMainTest {
         // 준영속 상태로 전환
         em.detach(member);
 
-        Assertions.assertThat(em.find(Member.class, 1L))
+        Assertions.assertThat(em.find(MemberTest.class, 1L))
                 .isNotEqualTo(member);
     }
 }
