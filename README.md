@@ -30,6 +30,9 @@
   - 필드와 컬럼 매핑
   - 기본 키 매핑 : 직접할당, 자동할당
   - @GeneratedValue의 IDENTITY 전략
+- [연관관계 매핑](https://jddng.tistory.com/313)
+  - 단방향 연관관계
+  - 양방향 연관관계
 
 
 ## 학습 테스트 코드
