@@ -6,6 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
+@Table
 @Getter @Setter
 @SequenceGenerator(
         name = "MEMBER_SEQ_GENERATOR",

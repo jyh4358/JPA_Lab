@@ -23,6 +23,14 @@
   - 플러시(flush)
   - 준영속 상태
 
+22.03.08
+- [엔티티 매핑](https://jddng.tistory.com/312)
+  - 데이터베이스 스키마 설정
+  - 객체와 테이블 매핑
+  - 필드와 컬럼 매핑
+  - 기본 키 매핑 : 직접할당, 자동할당
+  - @GeneratedValue의 IDENTITY 전략
+
 
 ## 학습 테스트 코드
 
@@ -30,26 +38,17 @@
 
 22.03.07
 - 동일성(identity) test
-
-
-<img src="https://user-images.githubusercontent.com/97331219/156993397-a1b91c47-4b38-4120-a4a7-f7e8de4c6097.png" width="400" height="300">
-
-
 - 쓰기지연 test
-
-<img src="https://user-images.githubusercontent.com/97331219/156993981-0a72aa59-f688-4071-86f3-74ad3adfe882.png" width="400" height="300">
-
-
 - 변경감지 test
-
-<img src="https://user-images.githubusercontent.com/97331219/156994707-286f6ce2-c47f-472f-8c44-484e91e3fed9.png" width="400" height="300">
-
 - 플러시 test
-
-<img src="https://user-images.githubusercontent.com/97331219/156995179-bc1a39ca-01a6-4b9e-8e55-509d2106f9bc.png" width="400" height="300">
-
 - 준영속 test
 
-<img src="https://user-images.githubusercontent.com/97331219/156995373-8b13f631-e70e-4d65-b806-9963a98b60e9.png" width="400" height="300">
+<img src="https://user-images.githubusercontent.com/97331219/157183179-1a58d084-a225-4fbb-8052-b58b87932b39.png" width="400" height="150">
 
 
+
+22.03.08
+- IDENTITY 전략 test
+- SEQUENCE 전략 test
+
+<img src="https://user-images.githubusercontent.com/97331219/157183411-2d6747a6-6ba8-4dc9-9981-6bfab2614d2a.png" width="400" height="150">

@@ -21,12 +21,11 @@ public class JpaMainTest {
     @Rollback(false)
     void 동일성(){
 
-        MemberTest member = new MemberTest();
-        member.setId(1L);
-        member.setName("member1");
+        MemberTest memberTest = new MemberTest();
+        memberTest.setName("member1");
 
         System.out.println("==== persist before ====");
-        em.persist(member);
+        em.persist(memberTest);
         System.out.println("==== persist after ====");
 
         MemberTest findMember1 = em.find(MemberTest.class,1L);
@@ -41,11 +40,9 @@ public class JpaMainTest {
     void 쓰기지연(){
 
         MemberTest member1 = new MemberTest();
-        member1.setId(1L);
-        member1.setName("member1");
+        member1.setName("member2");
         MemberTest member2 = new MemberTest();
-        member2.setId(2L);
-        member2.setName("member2");
+        member2.setName("member3");
 
         System.out.println("==== persist before ====");
         em.persist(member1);
@@ -60,17 +57,17 @@ public class JpaMainTest {
     void 변경감지(){
 
         MemberTest member = new MemberTest();
-        member.setId(1L);
-        member.setName("member1");
+        member.setName("member4");
 
         System.out.println("==== persist before ====");
         em.persist(member);
+        Long id = member.getId();
         System.out.println("==== persist after ====");
 
         member.setName("changeName");
         member.setName("changeName2");
 
-        Assertions.assertThat(em.find(MemberTest.class, 1L).getName())
+        Assertions.assertThat(em.find(MemberTest.class, id).getName())
                 .isEqualTo(member.getName());
     }
 
@@ -80,15 +77,15 @@ public class JpaMainTest {
     void 플러시(){
 
         MemberTest member = new MemberTest();
-        member.setId(1L);
-        member.setName("member1");
+        member.setName("member5");
 
 
         em.persist(member);
+        Long id = member.getId();
         System.out.println("==== flush before ====");
         em.flush();
         System.out.println("==== flush after ====");
-        Assertions.assertThat(em.find(MemberTest.class, 1L))
+        Assertions.assertThat(em.find(MemberTest.class, id))
                 .isEqualTo(member);
 
     }
@@ -99,14 +96,14 @@ public class JpaMainTest {
     void 준영속(){
 
         MemberTest member = new MemberTest();
-        member.setId(1L);
-        member.setName("member1");
+        member.setName("member6");
 
         em.persist(member);
+        Long id = member.getId();
         // 준영속 상태로 전환
         em.detach(member);
 
-        Assertions.assertThat(em.find(MemberTest.class, 1L))
+        Assertions.assertThat(em.find(MemberTest.class, id))
                 .isNotEqualTo(member);
     }
 }
