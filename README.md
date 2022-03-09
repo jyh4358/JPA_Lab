@@ -22,6 +22,11 @@
   - 지연 로딩(Lazy Loading)
   - 플러시(flush)
   - 준영속 상태
+- [다양한 연관관계 매핑](https://jddng.tistory.com/314)
+  - 다대일 [N : 1]
+  - 일대다 [1 : N]
+  - 일대일 [1 : 1]
+  - 다대다 [N : M]
 
 22.03.08
 - [엔티티 매핑](https://jddng.tistory.com/312)
