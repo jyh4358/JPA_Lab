@@ -38,6 +38,7 @@
 - [연관관계 매핑](https://jddng.tistory.com/313)
   - 단방향 연관관계
   - 양방향 연관관계
+- [상속관계 매핑](https://jddng.tistory.com/315)
 
 
 ## 학습 테스트 코드
