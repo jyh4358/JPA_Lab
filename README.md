@@ -40,6 +40,12 @@
   - 양방향 연관관계
 - [상속관계 매핑](https://jddng.tistory.com/315)
 
+22.03.10
+- [프록시와 연관관계](https://jddng.tistory.com/316)
+  - 프록시란?
+  - 즉시 로딩과 지연 로딩
+  - 영속성 전이(CASCADE)와 고아 객체
+
 
 ## 학습 테스트 코드
 
@@ -61,3 +67,7 @@
 - SEQUENCE 전략 test
 
 <img src="https://user-images.githubusercontent.com/97331219/157183411-2d6747a6-6ba8-4dc9-9981-6bfab2614d2a.png" width="400" height="150">
+
+22.03.10
+- 프록시와 영속성 컨텍스트 test
+- 영속성 전이(cascade) test
