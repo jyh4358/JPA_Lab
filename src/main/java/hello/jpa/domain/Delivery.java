@@ -13,9 +13,8 @@ public class Delivery {
     @Column(name = "DELIVERY_ID")
     private Long id;
 
-    private String city;
-    private String street;
-    private String zipcode;
+    @Embedded
+    private Address address;
 
     private DeliveryStatus status;
 
